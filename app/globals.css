@@ -2,26 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  @apply bg-theme-darkBlue
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container {
+  @apply max-w-[1440px] mx-auto px-[130px] py-4;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn-outlined-white {
+  @apply py-3 px-6 border border-theme-white rounded-xl font-semibold
+}
+
+.btn-filled-gradient {
+  @apply py-3 px-6 border border-theme-white border-opacity-5 rounded-xl font-semibold bg-gradient-to-r from-theme-purple to-theme-blue text-theme-white
+}
+
+.btn-filled-gradient-lg {
+  @apply py-5 px-8 rounded-xl border border-theme-white border-opacity-5 font-semibold bg-gradient-to-r from-theme-purple to-theme-blue text-theme-white
 }
